@@ -1,0 +1,18 @@
+# Configuration & Environment
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+python-dotenv>=1.0.0
+
+# Ingestion & Tokenization
+requests>=2.31.0      # For UpstageParser
+tiktoken>=0.7.0       # For accurate token counting
+PyYAML>=6.0           # For routing rules
+beautifulsoup4>=4.12.0 # For converting HTML to markdown
+
+# Database Drivers (Async)
+asyncpg>=0.29.0       # PostgreSQL async driver
+pymilvus>=2.4.0       # Milvus vector DB client
+
+# Utilities
+pytest>=8.0.0         # For running tests
+pytest-asyncio        # For testing async code

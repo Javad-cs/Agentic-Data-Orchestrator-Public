@@ -1,0 +1,40 @@
+# --- Core & Config ---
+python-dotenv>=1.0.0
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+PyYAML>=6.0
+tqdm>=4.66.0
+aiofiles>=23.0.0       # Async file I/O (for logging)
+
+# --- LLM & AI ---
+openai>=1.12.0
+cohere>=5.0.0
+tiktoken>=0.7.0
+sentence-transformers>=2.2.0
+langgraph>=0.1.0
+transformers>=4.36.0
+
+# --- Data & Math ---
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# --- Web & API ---
+requests>=2.31.0
+httpx>=0.25.0
+aiohttp>=3.9.0
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+beautifulsoup4>=4.12.0
+
+# --- Databases & Drivers ---
+asyncpg>=0.29.0       # Postgres
+pymilvus>=2.4.0       # Milvus (RAG)
+# faiss-cpu             # FAISS (SQL Agent LSH/Focused Schema) [install it via conda with pyhton version <= 3.12]
+datasketch>=1.6.0     # Minhash (SQL Agent)
+sqlglot>=20.0.0       # SQL Parsing
+oracledb>=2.0.0
+
+# --- Testing ---
+pytest>=8.0.0
+pytest-asyncio

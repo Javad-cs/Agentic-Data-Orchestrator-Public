@@ -1,0 +1,62 @@
+# --- PROJECT SPECIFIC (RAG AGENT) ---
+# Secrets & Environment
+.env
+.envrc
+config/production.yaml
+!config/default.yaml
+
+# Data & Databases
+data/inputs/*
+!data/inputs/.gitkeep   # Keep the folder, ignore the PDFs
+volumes/                # Milvus/Postgres data
+docker-volume/
+*.db
+*.sqlite3
+
+# Scratchpad & Maintenance Scripts
+will_delete_now/
+my_notes.txt
+upstage_response.json
+PROJECT_STRUCTURE.txt
+src/retrieval/rerankers/upstage.py
+
+# --- PYTHON STANDARD ---
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# --- VIRTUAL ENVIRONMENTS ---
+.venv
+env/
+venv/
+ENV/
+
+# --- IDE & TOOLS ---
+.idea/          # JetBrains
+.vscode/        # VS Code
+*.swp
+.cursorignore   # Cursor
+.DS_Store       # Mac
+
+# --- LOGS ---
+*.log
+
+# -- Container -- 
+docker-compose.yml
