@@ -1,0 +1,37 @@
+# Routing Rules - Based on paper Figure 7 (Initial Rule)
+# Simple, domain-agnostic, 4 core rules for now
+
+version: "1.0"
+updated: "2026-02-02"
+source: "Learning to Route paper - Figure 7 Initial Rule"
+
+rules:
+  - id: RULE_1
+    description: "If question requests numbers, percentages, years, or calculations, then FACT_ONLY path +3 points"
+    score: 3
+    path: fact_only
+    
+  - id: RULE_2
+    description: "If question contains 'how', 'why', 'where', or asks for process/explanation, then DOC_ONLY path +3 points"
+    score: 3
+    path: doc_only
+    
+  - id: RULE_3
+    description: "If question asks for definition or general knowledge, then LLM_ONLY path +3 points"
+    score: 3
+    path: llm_only
+    
+  - id: RULE_4
+    description: "If question has multiple requirements (both data and explanation), then COMPLEX_DUAL path +3 points"
+    score: 3
+    path: complex_dual
+
+scoring_instructions: |
+  SCORING PROCESS:
+  1. Start all paths at 0
+  2. For each rule, if condition matches, ADD points to specified path
+  3. Multiple rules can match (scores accumulate)
+  4. Highest score wins
+  
+  Note: All rules have equal weight (+3 points) in the initial version.
+  The system learns to adjust these weights through the Rule-Making Expert Agent.
